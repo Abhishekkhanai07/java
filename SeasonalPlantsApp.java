@@ -41,9 +41,7 @@ class SeasonalPlantsApp {
         String location = capitalize(scanner.nextLine().trim());
         System.out.print("Enter the season (Summer/Winter/Rainy): ");
         String season = capitalize(scanner.nextLine().trim());
-        
         Map<String, List<String>> seasonPlants = plantDatabase.get(location);
-        
         if (seasonPlants != null && seasonPlants.containsKey(season)) {
             System.out.println(season + " plants for " + location + ":");
             for (String plant : seasonPlants.get(season)) {
